@@ -1,4 +1,5 @@
 import postgres from 'postgres';
+/** @type {import('next').NextConfig} */
 
 export const sql = postgres(process.env.POSTGRES_URL, {
   ssl: false,
@@ -6,7 +7,17 @@ export const sql = postgres(process.env.POSTGRES_URL, {
 
 const nextConfig = {
   experimental: {
+    turbo: {
+      resolveAlias: {
+        canvas: './empty-module.ts',
+      },
+    },
     ppr: false,
+  },
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    config.resolve.alias.canvas = false;
+    // config.serolveialias.encoding = false;
+    return config;
   },
   logging: {
     fetches: {
@@ -39,6 +50,7 @@ const nextConfig = {
     ];
   },
 };
+// module.exports = nextConfig;
 
 const ContentSecurityPolicy = `
     default-src 'self' vercel.live;
