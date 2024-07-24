@@ -1,13 +1,13 @@
-"use client";
-import { useState } from "react";
-import { Document, Page, pdfjs } from "react-pdf";
+'use client';
+import React, { useState } from 'react';
+import { Document, Page, pdfjs } from 'react-pdf';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
   import.meta.url,
 ).toString();
 
-const PDFViewer = ({ pdfPath }) => {
+const PDFViewer = ({ pdfPath }: { pdfPath: string }) => {
   const [numPages, setNumPages] = useState(null);
 
   function onDocumentLoadSuccess({ numPages }) {

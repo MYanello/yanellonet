@@ -1,0 +1,12 @@
+dist
+**/dashboard/**
+**/fixtures/**
+**/node_modules/**
+**/vendor/**
+**/coverage/**
+**/build/**
+assets
+jsDep.js
+i18n.js
+jobs/static/**
+!components/Dashboard

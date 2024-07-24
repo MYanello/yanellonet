@@ -11,18 +11,18 @@ import { unstable_noStore as noStore } from 'next/cache';
 export async function generateMetadata({
   params,
 }): Promise<Metadata | undefined> {
-  let post = getBlogPosts().find((post) => post.slug === params.slug);
+  const post = getBlogPosts().find((post) => post.slug === params.slug);
   if (!post) {
     return;
   }
 
-  let {
+  const {
     title,
     publishedAt: publishedTime,
     summary: description,
     image,
   } = post.metadata;
-  let ogImage = image
+  const ogImage = image
     ? `https://yanello.net${image}`
     : `https://yanello.net/og?title=${title}`;
 
@@ -52,15 +52,15 @@ export async function generateMetadata({
 
 function formatDate(date: string) {
   noStore();
-  let currentDate = new Date().getTime();
+  const currentDate = new Date().getTime();
   if (!date.includes('T')) {
     date = `${date}T00:00:00`;
   }
-  let targetDate = new Date(date).getTime();
-  let timeDifference = Math.abs(currentDate - targetDate);
-  let daysAgo = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-  
-  let fullDate = new Date(date).toLocaleString('en-us', {
+  const targetDate = new Date(date).getTime();
+  const timeDifference = Math.abs(currentDate - targetDate);
+  const daysAgo = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+  const fullDate = new Date(date).toLocaleString('en-us', {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
@@ -71,19 +71,19 @@ function formatDate(date: string) {
   } else if (daysAgo < 7) {
     return `${fullDate} (${daysAgo}d ago)`;
   } else if (daysAgo < 30) {
-    const weeksAgo = Math.floor(daysAgo / 7)
+    const weeksAgo = Math.floor(daysAgo / 7);
     return `${fullDate} (${weeksAgo}w ago)`;
   } else if (daysAgo < 365) {
-    const monthsAgo = Math.floor(daysAgo / 30)
+    const monthsAgo = Math.floor(daysAgo / 30);
     return `${fullDate} (${monthsAgo}mo ago)`;
   } else {
-    const yearsAgo = Math.floor(daysAgo / 365)
+    const yearsAgo = Math.floor(daysAgo / 365);
     return `${fullDate} (${yearsAgo}y ago)`;
   }
 }
 
 export default function Blog({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug);
+  const post = getBlogPosts().find((post) => post.slug === params.slug);
 
   if (!post) {
     notFound();
@@ -133,10 +133,10 @@ export default function Blog({ params }) {
   );
 }
 
-let incrementViews = cache(increment);
+const incrementViews = cache(increment);
 
 async function Views({ slug }: { slug: string }) {
-  let views = await getViewsCount();
+  const views = await getViewsCount();
   incrementViews(slug);
   return <ViewCounter allViews={views} slug={slug} />;
 }
