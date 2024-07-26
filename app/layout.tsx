@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     default: 'Marcus Yanello',
     template: '%s | Marcus Yanello',
   },
-  description: 'Developer, writer, and creator.',
+  description: 'Developer, tinkerer, and creator.',
   openGraph: {
     title: 'Marcus Yanello',
-    description: 'Developer, writer, and creator.',
+    description: 'Developer, tinkerer, and creator.',
     url: 'https://yanello.net',
     siteName: 'Marcus Yanello',
     locale: 'en_US',

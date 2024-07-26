@@ -6,7 +6,8 @@ export default async function sitemap() {
     lastModified: post.metadata.publishedAt,
   }));
 
-  const routes = ['', '/blog', '/guestbook', '/uses', '/work'].map((route) => ({
+  const routes = ['', '/work', '/guestbook'].map((route) => ({
+    // ['', '/blog', '/guestbook', '/uses', '/work'].map((route) => ({
     url: `https://yanello.net${route}`,
     lastModified: new Date().toISOString().split('T')[0],
   }));

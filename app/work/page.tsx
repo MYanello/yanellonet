@@ -17,7 +17,15 @@ const rescalesupport = {
     'Provided technical support to customers using the company’s software.',
 };
 
-export default function Page() {
+const hpe = {
+  title: 'Mechanical Product Engineer',
+  company: 'Tech Company',
+  dates: 'Jan 2019 - Dec 2019',
+  description:
+    'Provided technical support to customers using the company’s software.',
+};
+
+export default function WorkPage() {
   return (
     <div>
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">
@@ -26,6 +34,7 @@ export default function Page() {
       <section>
         <JobRole comp={rescalesoftware} />
         <JobRole comp={rescalesupport} />
+        <JobRole comp={hpe} />
       </section>
     </div>
   );
