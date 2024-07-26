@@ -1,11 +1,32 @@
-import PDFViewer from 'app/components/PdfViewer';
 import React from 'react';
+import JobRole from './experience/experienceItem';
+
+const rescalesoftware = {
+  title: 'Software Engineer',
+  company: 'Tech Company',
+  dates: 'Jan 2020 - Present',
+  description:
+    'Developed and maintained web applications using React and Node.js.',
+};
+
+const rescalesupport = {
+  title: 'Customer Support Engineer',
+  company: 'Tech Company',
+  dates: 'Jan 2019 - Dec 2019',
+  description:
+    'Provided technical support to customers using the company’s software.',
+};
 
 export default function Page() {
   return (
-    <section>
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">my work</h1>
-      <PDFViewer pdfPath="/latest.pdf" />
-    </section>
+    <div>
+      <h1 className="font-medium text-2xl mb-8 tracking-tighter">
+        Job Experience
+      </h1>
+      <section>
+        <JobRole comp={rescalesoftware} />
+        <JobRole comp={rescalesupport} />
+      </section>
+    </div>
   );
 }
