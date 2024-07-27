@@ -1,43 +1,17 @@
 import React from 'react';
 
-interface JobExperienceProps {
-  title: string;
-  company: string;
-  dates: string;
-  description: string;
-}
-
-const JobExperience: React.FC<JobExperienceProps> = ({
-  title,
-  company,
-  dates,
-  description,
-}) => {
+const jobRoleItem = ({ comp }) => {
   return (
-    <section className="job-experience">
-      <h2 className="font-medium text-xl">{title}</h2>
-      <p className="text-gray-500">{company}</p>
-      <p className="text-gray-500">{dates}</p>
-      <p>{description}</p>
+    <section className="mb-8">
+      <h2 className="font-medium text-xl">{comp.title}</h2>
+      <h3 className="text-gray-700">{comp.company}</h3>
+      <p className="text-gray-500">{comp.dates}</p>
+      <ul className="list-disc pl-5">
+        {comp.description.map((line, index) => (
+          <li key={index}>{line}</li>
+        ))}
+      </ul>
     </section>
   );
 };
-
-interface JobRoleProps {
-  comp: JobExperienceProps;
-}
-
-const JobRole: React.FC<JobRoleProps> = ({ comp }) => {
-  return (
-    <div className="mb-8">
-      <JobExperience
-        title={comp.title}
-        company={comp.company}
-        dates={comp.dates}
-        description={comp.description}
-      />
-    </div>
-  );
-};
-
-export default JobRole;
+export default jobRoleItem;

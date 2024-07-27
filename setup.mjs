@@ -39,7 +39,7 @@ const deleteFolderRecursive = async (path) => {
   if (stat.isDirectory()) {
     const files = await fs.readdir(path);
     await Promise.all(
-      files.map((file) => deleteFolderRecursive(`${path}/${file}`))
+      files.map((file) => deleteFolderRecursive(`${path}/${file}`)),
     );
     await fs.rmdir(path);
   } else {
@@ -57,7 +57,7 @@ const deleteFolderRecursive = async (path) => {
     return;
   }
 
-  const contentDir = path.join(process.cwd(), 'content');
+  // const contentDir = path.join(process.cwd(), 'content');
   const imagesDir = path.join(process.cwd(), 'public', 'images');
   const appDir = path.join(process.cwd(), 'app');
   const workDir = path.join(process.cwd(), 'app', 'work');

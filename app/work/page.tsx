@@ -1,29 +1,11 @@
 import React from 'react';
 import JobRole from './experience/experienceItem';
-
-const rescalesoftware = {
-  title: 'Software Engineer',
-  company: 'Tech Company',
-  dates: 'Jan 2020 - Present',
-  description:
-    'Developed and maintained web applications using React and Node.js.',
-};
-
-const rescalesupport = {
-  title: 'Customer Support Engineer',
-  company: 'Tech Company',
-  dates: 'Jan 2019 - Dec 2019',
-  description:
-    'Provided technical support to customers using the company’s software.',
-};
-
-const hpe = {
-  title: 'Mechanical Product Engineer',
-  company: 'Tech Company',
-  dates: 'Jan 2019 - Dec 2019',
-  description:
-    'Provided technical support to customers using the company’s software.',
-};
+import {
+  rescalesoftware,
+  rescaleseniorsupport,
+  rescalesupport,
+  hpe,
+} from './experience/experienceData';
 
 export default function WorkPage() {
   return (
@@ -33,6 +15,7 @@ export default function WorkPage() {
       </h1>
       <section>
         <JobRole comp={rescalesoftware} />
+        <JobRole comp={rescaleseniorsupport} />
         <JobRole comp={rescalesupport} />
         <JobRole comp={hpe} />
       </section>
