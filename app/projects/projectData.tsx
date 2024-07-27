@@ -53,3 +53,10 @@ export const reverseproxy: project = {
     'Utilized a secure and high-availability (HA) setup using HAproxy and Nginx to reverse proxy services to local applications from the public internet.',
   ],
 };
+
+export const site: project = {
+  title: 'This Personal Site',
+  description: [
+    'Developed a personal site using Next.js, React, and Tailwind CSS.',
+  ],
+};

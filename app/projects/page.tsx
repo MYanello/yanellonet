@@ -7,6 +7,7 @@ import {
   firewall,
   containers,
   reverseproxy,
+  site,
 } from './projectData';
 
 const projects = [
@@ -16,6 +17,7 @@ const projects = [
   firewall,
   containers,
   reverseproxy,
+  site,
 ];
 
 export default function projectList() {
