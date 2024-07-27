@@ -10,7 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-Fira)'],
+        sans: ['var(--font-graphik)'],
+        fira: ['Fira Code', 'monospace'],
       },
       typography: {
         quoteless: {
