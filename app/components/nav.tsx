@@ -4,29 +4,18 @@ const navItems = {
   '/': {
     name: 'work',
   },
+  '/projects': {
+    name: 'projects',
+  },
+  'https://notes.yanello.net': {
+    name: 'notes',
+  },
   'https://github.com/MYanello': {
     name: 'github',
-    external: true,
   },
   'https://www.linkedin.com/in/marcusyan/': {
     name: 'linkedin',
-    external: true,
   },
-  '/projects': {
-    name: '',
-  },
-  // '/': {
-  //   name: 'home',
-  // },
-  // '/work': {
-  //   name: 'work',
-  // },
-  // '/blog': {
-  //   name: 'blog',
-  // },
-  // '/guestbook': {
-  //   name: 'guestbook',
-  // },
 };
 
 export function Navbar() {
@@ -43,7 +32,7 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
-                  className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2"
+                  className="transition-all hover:text-accent text-foreground flex align-middle relative py-1 px-2"
                 >
                   {name}
                 </Link>

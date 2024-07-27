@@ -1,16 +1,16 @@
 import React from 'react';
-import JobRole from './experience/experienceItem';
+import JobRole from './experienceItem';
 import {
   rescalesoftware,
   rescaleseniorsupport,
   rescalesupport,
   hpe,
-} from './experience/experienceData';
+} from './experienceData';
 
 export default function WorkPage() {
   return (
-    <div className="w-full">
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">
+    <div className="w-full b">
+      <h1 className="text-foreground font-medium text-2xl mb-8 tracking-tighter">
         Job Experience
       </h1>
       <section>

@@ -4,7 +4,7 @@
     "dev": "next dev",
     "build": "npm run setup && next build",
     "build-only": "next build",
-    "start": "next start",
+    "start": "next start --port=3002",
     "setup": "node ./setup.mjs",
     "prettier-watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
     "lint": "eslint . --ext .ts,.tsx",

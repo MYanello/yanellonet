@@ -190,6 +190,10 @@ table {
   color: #565f89; /* Muted text color */
 }
 
+.hover\:text-accent:hover {
+  color: #f7768e; /* Accent text color on hover */
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 
 body {
