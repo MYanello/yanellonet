@@ -13,7 +13,7 @@ export default function WorkPage() {
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">
         Job Experience
       </h1>
-      <section className="font-fira">
+      <section>
         <JobRole comp={rescalesoftware} />
         <JobRole comp={rescaleseniorsupport} />
         <JobRole comp={rescalesupport} />
