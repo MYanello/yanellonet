@@ -59,4 +59,5 @@ export const site: project = {
   description: [
     'Developed a personal site using Next.js, React, and Tailwind CSS.',
   ],
+  link: 'https://github.com/MYanello/yanellonet/',
 };

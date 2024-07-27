@@ -3,7 +3,8 @@
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "@typescript-eslint",
-    "prettier"  ],
+    "prettier",
+    "import"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -11,6 +12,14 @@
     "prettier"  ],
   "rules": {
     "no-console": 1,       // Means warning
-    "prettier/prettier": 2 // Means error  }
+    "prettier/prettier": 2, // Means error  }
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", ["parent", "sibling", "index"]],
+        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "newlines-between": "always"
+      },
+    ],
     }
 }

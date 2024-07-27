@@ -1,5 +1,5 @@
 import React from 'react';
-import Project from './projectItem';
+
 import {
   linuxadmin,
   netadmin,
@@ -9,6 +9,7 @@ import {
   reverseproxy,
   site,
 } from './projectData';
+import Project from './projectItem';
 
 const projects = [
   netadmin,

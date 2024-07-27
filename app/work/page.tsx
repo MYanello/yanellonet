@@ -1,11 +1,12 @@
 import React from 'react';
-import JobRole from './experienceItem';
+
 import {
   rescalesoftware,
   rescaleseniorsupport,
   rescalesupport,
   hpe,
 } from './experienceData';
+import JobRole from './experienceItem';
 
 export default function WorkPage() {
   return (
