@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 ::selection {
-  background-color: #47a3f3;
+  background-color: #9b236d;
   color: #fefefe;
 }
 
@@ -118,10 +118,6 @@ input[type='email'] {
   appearance: none;
 }
 
-.prose .tweet a {
-  text-decoration: inherit;
-  font-weight: 500;
-}
 
 table {
   display: block;
@@ -138,7 +134,7 @@ table {
   text-wrap: balance;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Fira Code';
   src: url('/fonts/FiraCode-Regular.ttf') format('truetype');
   font-weight: 400;
@@ -150,8 +146,9 @@ table {
   src: url('/fonts/FiraCode-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
-}
+} */
 
+/* tokyo night storm */
 
 .bg-background {
   background-color: #24283b; /* Background color */
@@ -191,4 +188,10 @@ table {
 
 .text-muted {
   color: #565f89; /* Muted text color */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+body {
+  font-family: 'Fira Code', monospace;
 }

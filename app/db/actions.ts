@@ -43,22 +43,22 @@ export async function saveGuestbookEntry(formData: FormData) {
 
   revalidatePath('/guestbook');
 
-  const data = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${process.env.RESEND_SECRET}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      from: 'guestbook@yanello.net',
-      to: 'me@yanello.net',
-      subject: 'New Guestbook Entry',
-      html: `<p>Email: ${email}</p><p>Message: ${body}</p>`,
-    }),
-  });
+  // const data = await fetch('https://api.resend.com/emails', {
+  //   method: 'POST',
+  //   headers: {
+  //     Authorization: `Bearer ${process.env.RESEND_SECRET}`,
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify({
+  //     from: 'guestbook@yanello.net',
+  //     to: 'me@yanello.net',
+  //     subject: 'New Guestbook Entry',
+  //     html: `<p>Email: ${email}</p><p>Message: ${body}</p>`,
+  //   }),
+  // });
 
-  const response = await data.json();
-  console.log('Email sent', response);
+  // const response = await data.json();
+  // console.log('Email sent', response);
 }
 
 export async function deleteGuestbookEntries(selectedEntries: string[]) {
