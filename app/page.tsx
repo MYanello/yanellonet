@@ -3,7 +3,7 @@ import WorkPage from './work/page';
 
 export default function Page() {
   return (
-    <div>
+    <div className="w-4xl">
       <WorkPage />
     </div>
   );

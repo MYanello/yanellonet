@@ -9,7 +9,7 @@ import {
 
 export default function WorkPage() {
   return (
-    <div>
+    <div className="w-full">
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">
         Job Experience
       </h1>

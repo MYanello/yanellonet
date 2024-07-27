@@ -151,3 +151,44 @@ table {
   font-weight: 700;
   font-style: normal;
 }
+
+
+.bg-background {
+  background-color: #24283b; /* Background color */
+}
+
+.text-foreground {
+  color: #c0caf5; /* Foreground color */
+}
+
+.bg-primary {
+  background-color: #7aa2f7; /* Primary background color */
+}
+
+.text-primary {
+  color: #7aa2f7; /* Primary text color */
+}
+
+.bg-secondary {
+  background-color: #bb9af7; /* Secondary background color */
+}
+
+.text-secondary {
+  color: #bb9af7; /* Secondary text color */
+}
+
+.bg-accent {
+  background-color: #f7768e; /* Accent background color */
+}
+
+.text-accent {
+  color: #f7768e; /* Accent text color */
+}
+
+.bg-muted {
+  background-color: #565f89; /* Muted background color */
+}
+
+.text-muted {
+  color: #565f89; /* Muted text color */
+}

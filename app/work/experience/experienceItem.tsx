@@ -3,10 +3,10 @@ import React from 'react';
 const jobRoleItem = ({ comp }) => {
   return (
     <section className="mb-8">
-      <h2 className="font-medium text-xl">{comp.title}</h2>
-      <h3 className="text-gray-700">{comp.company}</h3>
-      <p className="text-gray-500">{comp.dates}</p>
-      <ul className="list-disc pl-5">
+      <h2 className="font-medium text-xl text-accent">{comp.title}</h2>
+      <h3 className="text-secondary">{comp.company}</h3>
+      <p className="text-muted">{comp.dates}</p>
+      <ul className="text-foreground list-disc pl-5">
         {comp.description.map((line, index) => (
           <li key={index}>{line}</li>
         ))}

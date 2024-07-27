@@ -4,6 +4,17 @@ const navItems = {
   '/': {
     name: 'work',
   },
+  'https://github.com/MYanello': {
+    name: 'github',
+    external: true,
+  },
+  'https://www.linkedin.com/in/marcusyan/': {
+    name: 'linkedin',
+    external: true,
+  },
+  '/projects': {
+    name: '',
+  },
   // '/': {
   //   name: 'home',
   // },
@@ -13,9 +24,9 @@ const navItems = {
   // '/blog': {
   //   name: 'blog',
   // },
-  '/guestbook': {
-    name: 'guestbook',
-  },
+  // '/guestbook': {
+  //   name: 'guestbook',
+  // },
 };
 
 export function Navbar() {

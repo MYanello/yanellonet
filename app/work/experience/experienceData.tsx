@@ -10,10 +10,10 @@ export const rescalesoftware: experience = {
   company: 'Rescale',
   dates: 'April 2024 - Present',
   description: [
-    'Iterate upon existing cloud networking infrastructure to ensure customer privacy and privacy by automating deployment of customer specific Cloud Private Networks (VPC and VNet)',
-    'Ensure minimal vulnerabilities across fleet of container images implemented in company cloud infrastructure',
-    'Manage Postgres tables, celery tasks, and API endpoints using the Django Python framework',
+    'Manage PostgreSQL tables, Celery tasks, and API endpoints using the Django Python framework',
     'Expose API endpoints from the frontend of the product using ReactJS',
+    'Iterate upon existing cloud networking infrastructure to ensure customer privacy by automating deployment of customer specific Cloud Private Networks (VPC and VNet)',
+    'Ensure minimal vulnerabilities across fleet of container images implemented in company cloud infrastructure',
   ],
 };
 
