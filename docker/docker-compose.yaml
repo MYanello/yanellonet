@@ -1,0 +1,19 @@
+services:
+  yanellonet:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+      # args:
+      #   APP_UID: 10001
+    platform: linux/amd64
+    image: yanellonet:latest
+    ports: 
+    - 3002:3002
+
+    # network_mode: host
+    volumes:
+    - ../:/app/
+    # # environment:
+    #   - APIKEY_PLATFORM_LOCAL_RESCALE_COM=${APIKEY_PLATFORM_LOCAL_RESCALE_COM}
+    # extra_hosts:
+    #   - "platform-local.rescale.com:192.168.5.2"
